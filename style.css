@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.clock-container {
+    text-align: center;
+}
+
+.digital-clock {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.analog-clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hand {
+    position: absolute;    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%;
+    transform: rotate(90deg);
+    transition: transform 0.05s ease-in-out;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.hour {
+    height: 4px;
+    width: 40%;
+    background: #fff;
+}
+
+.minute {
+    height: 3px;
+    background: #ffeb3b;
+}
+
+.second {
+    height: 2px;
+    background: #f44336;
+}
+
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+    width: 50%;
+    height: 2px;
